@@ -21,7 +21,7 @@ public class MyService extends Service {
 
     @Override
     public void onCreate() {
-        System.out.print("MyService.onCreate");
+        System.out.println("MyService.onCreate");
         isStop = false;
         t = new Thread() {
             @Override
@@ -30,7 +30,7 @@ public class MyService extends Service {
                     if (!isStop) {
                         try {
                             Thread.sleep(1000);
-                            System.out.print("count = " + count);
+                            System.out.println("count = " + count);
                             count++;
                         } catch (InterruptedException e) {
                             e.printStackTrace();

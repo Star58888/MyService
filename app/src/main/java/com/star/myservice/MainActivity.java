@@ -11,12 +11,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.out.print("MainActivity.onCreate");
+        System.out.println("MainActivity.onCreate");
     }
 
     public void onStartService(View v)
     {
-        System.out.print("MainActivity.onStartService");
+        System.out.println("MainActivity.onStartService");
         Intent intent = new Intent(this , MyService.class);
         MyService.isStop = false;
         startService(intent);
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onStopService(View v)
     {
-        System.out.print("MainActivity.onStopService");
+        System.out.println("MainActivity.onStopService");
         Intent intent = new Intent(this , MyService.class);
         MyService.isStop = true;
         stopService(intent);
